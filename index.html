@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For You 💕</title>
+
+<link rel="stylesheet" href="style .css">
+
+</head>
+
+<body>
+
+
+<div class="page" id="firstPage">
+
+    <div class="card">
+
+        <div style="font-size:70px;">
+            🌸
+        </div>
+
+        <h1>
+            Hey Beautiful 💕
+        </h1>
+
+        <p>
+            I have a little question for you... 👀
+        </p>
+
+        <p>
+            What's today's date? 🎀
+        </p>
+
+        <input type="date" id="dateInput">
+
+        <br>
+
+        <button onclick="checkDate()">
+            Continue 💗
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="page" id="birthdayPage">
+
+    <div class="card">
+
+        <div style="font-size:50px;">
+            🎉 💕 🎈
+        </div>
+
+        <h1>
+            Happy Birthday Angel 🎂💖
+        </h1>
+
+        <div class="cake">
+            🎂
+        </div>
+
+        <p>
+            May your special day be filled with happiness,
+            smiles, love and beautiful memories. ✨
+        </p>
+
+        <p>
+            You deserve all the happiness in the world. 💕
+        </p>
+
+        <button onclick="showMemoryPage()">
+            I have a surprise for you 🎁
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+<div class="memory-page" id="memoryPage">
+
+    <h1>
+        A Little Memory 💭💕
+    </h1>
+
+    <p class="memory-message">
+
+        Some moments become memories,
+        and some memories become something
+        you always want to keep close to your heart. ❤️
+
+        <br><br>
+
+        So I kept a few little surprises here for you... 🎀
+
+        <br><br>
+
+        Click all three balloons 🎈
+
+    </p>
+
+    <div class="balloon-container">
+
+        <div class="balloon"
+             id="balloon1"
+             onclick="showPhoto(1)">
+            CLICK ME 💕
+        </div>
+
+        <div class="balloon"
+             id="balloon2"
+             onclick="showPhoto(2)">
+            CLICK ME 💗
+        </div>
+
+        <div class="balloon"
+             id="balloon3"
+             onclick="showPhoto(3)">
+            CLICK ME 💖
+        </div>
+
+    </div>
+
+    <button id="lastButton" onclick="showFinalPage()">
+        One Last Thing 💌
+    </button>
+
+</div>
+
+
+
+
+<div class="page" id="photoPage">
+
+    <div class="photo-card">
+
+        <h1 id="photoTitle">
+            A Beautiful Memory 💕
+        </h1>
+
+        <img id="memoryPhoto"
+             src=""
+             alt="Memory Photo">
+
+        <p class="photo-message"
+           id="photoMessage">
+        </p>
+
+        <button onclick="showMemoryPage()">
+            ← Back to Memories
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<div class="page" id="finalPage">
+
+    <div class="card">
+
+        <div style="font-size:65px;">
+            💕🌸
+        </div>
+
+        <h1>
+            One Last Thing... 💖
+        </h1>
+
+        <p class="final-text">
+
+            I don't know how special this little surprise
+            will be for you, but I just wanted to make your
+            birthday a little more beautiful. ✨
+
+            <br><br>
+
+            Some people come into our lives and somehow
+            make ordinary life feel special.
+            I always wish for your success. 💕
+
+            <br><br>
+
+            I hope you always keep that beautiful smile,
+            keep shining, and keep being the amazing person
+            you are. 🌸
+
+            <br><br>
+
+            And no matter how simple this surprise is,
+            I hope it made you smile even for a moment.
+
+            A smile on your face is the only thing
+            I ask from God.
+
+            <br><br>
+
+            Always for you. ❤️
+
+        </p>
+
+        <div class="signature">
+            by someone... 💕
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

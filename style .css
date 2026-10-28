@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #ffd1e3, #fff0f7, #ffd6ec);
+    overflow-x: hidden;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+    background: rgba(255,255,255,0.90);
+    padding: 45px 25px;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(214,51,132,0.20);
+}
+
+h1 {
+    color: #e91e63;
+    font-size: 38px;
+}
+
+p {
+    color: #666;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+button {
+    border: none;
+    background: #ff4f91;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e91e63;
+    transform: scale(1.05);
+}
+
+input {
+    padding: 14px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 15px;
+    border: 2px solid #ff9fc2;
+    font-size: 17px;
+    text-align: center;
+    outline: none;
+}
+
+
+
+#birthdayPage,
+#memoryPage,
+#photoPage,
+#finalPage {
+    display: none;
+}
+
+
+
+.cake {
+    font-size: 120px;
+    margin: 20px;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* FALLING HEARTS */
+
+.heart {
+    position: fixed;
+    top: -30px;
+    font-size: 25px;
+    animation: fall linear forwards;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* MEMORY PAGE */
+
+.memory-page {
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.memory-message {
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+    color: #555;
+}
+
+/* BALLOONS */
+
+.balloon-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.balloon {
+    width: 125px;
+    height: 155px;
+    border-radius: 50% 50% 45% 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    animation: float 2.5s ease-in-out infinite;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.balloon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background: #777;
+    top: 150px;
+}
+
+.balloon:nth-child(1) {
+    background: #ff5c8a;
+}
+
+.balloon:nth-child(2) {
+    background: #b85cff;
+    animation-delay: .4s;
+}
+
+.balloon:nth-child(3) {
+    background: #ff9f43;
+    animation-delay: .8s;
+}
+
+.balloon.clicked {
+    opacity: 0.55;
+    transform: scale(0.9);
+}
+
+@keyframes float {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* PHOTO */
+
+.photo-card {
+    width: 90%;
+    max-width: 650px;
+    background: rgba(255,255,255,.92);
+    padding: 25px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+}
+
+.photo-card img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.photo-message {
+    font-size: 20px;
+    color: #555;
+}
+
+/* LAST BUTTON */
+
+#lastButton {
+    display: none;
+    margin-top: 70px;
+}
+
+/* FINAL PAGE */
+
+.final-text {
+    font-size: 20px;
+    line-height: 1.9;
+    color: #555;
+}
+
+.signature {
+    margin-top: 35px;
+    color: #e91e63;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .cake {
+        font-size: 90px;
+    }
+
+    .balloon-container {
+        gap: 35px;
+    }
+
+    .balloon {
+        width: 105px;
+        height: 135px;
+        font-size: 14px;
+    }
+
+    .balloon::after {
+        top: 130px;
+    }
+
+    .final-text {
+        font-size: 17px;
+    }
+}
